@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1240</width>
-    <height>664</height>
+    <width>642</width>
+    <height>401</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>280</y>
+      <x>30</x>
+      <y>90</y>
       <width>105</width>
       <height>54</height>
      </rect>
@@ -27,30 +27,30 @@
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>Create Invoice</string>
+        <string>Report Expense</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>Report Expense</string>
+        <string>View Expenses</string>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>290</y>
-      <width>80</width>
-      <height>23</height>
+      <x>230</x>
+      <y>20</y>
+      <width>391</width>
+      <height>301</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>TextLabel</string>
     </property>
    </widget>
   </widget>
@@ -59,7 +59,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1240</width>
+     <width>642</width>
      <height>20</height>
     </rect>
    </property>

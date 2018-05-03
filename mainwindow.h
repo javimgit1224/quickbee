@@ -1,9 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#include <QMainWindow>
-#include "invoice.h"
-#include "viewinvoice.h"
 
+#include <QMainWindow>
+#include "reportexpense.h"
+#include "graph.h"
 namespace Ui {
 class MainWindow;
 }
@@ -14,17 +14,19 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
+    ~MainWindow();    
 
 private slots:
     void on_pushButton_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;
-    invoice *in; //create invoice class
-    viewinvoice *view; //create view invoice class
+    reportexpense *report;
+    graph *g;
+
+
 };
 
 #endif // MAINWINDOW_H
