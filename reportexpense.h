@@ -20,6 +20,9 @@ private slots:
 
 private:
     Ui::reportexpense *ui;
+    QVector<QString> accounts; //a vector of strings to hold the account name
+    QVector<QString> vendors; //a vector of strings to hold the vendor names
+    QVector<double> amount; //a vector of doubles to hold the amount from the accounts
 };
 
 #endif // REPORTEXPENSE_H

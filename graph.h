@@ -18,7 +18,7 @@ public:
 private slots:
     void makePlot();
 private:
-    Ui::graph *ui;
+    Ui::graph *ui;    
 };
 
 #endif // GRAPH_H
