@@ -34,6 +34,9 @@ private:
     int count1 = 1;
     int graphcount = 1;
     int j = 0;
+    QString ven,date,acc;
+    double am;
+    QVector<QString> dates;
 
 };
 

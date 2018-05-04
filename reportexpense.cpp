@@ -6,6 +6,7 @@ reportexpense::reportexpense(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->widget->hide();
+    ui->dateEdit->setDate(QDate::currentDate());
 }
 
 reportexpense::~reportexpense()
@@ -17,15 +18,21 @@ void reportexpense::on_pushButton_clicked()
 {
     count++;
     count1++;
+    j++;
 
         vendors.push_back(ui->lineEdit->text());
          amount.push_back(ui->lineEdit_2->text().toDouble());
        accounts.push_back(ui->lineEdit_3->text());
+       dates.push_back(ui->dateEdit->text());
+    date = dates[j-1];
+    ven = vendors[j-1];
+    acc = accounts[j-1];
+    am = amount[j-1];
 
     ui->lineEdit->clear();
     ui->lineEdit_2->clear();
     ui->lineEdit_3->clear();
-
+    ui->label_5->setText("Last entered transaction: " + date + " " + ven + " " + acc + " $" + QString::number(am));
     makebar();
 }
 void reportexpense::makebar()
@@ -71,14 +78,26 @@ void reportexpense::on_pushButton_3_clicked()
 {
     count++;
     count1++;
+    j++;
+
     //save the data to its assigned vector
     vendors.push_back(ui->lineEdit->text());
     amount.push_back(ui->lineEdit_2->text().toDouble());
     accounts.push_back(ui->lineEdit_3->text());
+    dates.push_back(ui->dateEdit->text());
+
+    date = dates[j-1];
+    ven = vendors[j-1];
+    acc = accounts[j-1];
+    am = amount[j-1];
+
     ui->lineEdit->clear();
     ui->lineEdit_2->clear();
     ui->lineEdit_3->clear();
+    ui->label_5->setText("Last entered transaction: " + date + " " + ven + " " + acc + " $" + QString::number(am));
+
     hide();
+
     makebar();
 }
 
@@ -88,4 +107,9 @@ void reportexpense::on_pushButton_4_clicked()
     count1++;
 
     hide();
+    ui->lineEdit->clear();
+    ui->lineEdit_2->clear();
+    ui->lineEdit_3->clear();
+    ui->pushButton_2->setText("GRAPH");
+    ui->widget->hide();
 }
