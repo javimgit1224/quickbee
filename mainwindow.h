@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include "reportexpense.h"
-#include "graph.h"
 namespace Ui {
 class MainWindow;
 }
@@ -19,12 +18,14 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;
     reportexpense *report;
-    graph *g;
+
+    int count = 0;
+    int count2 = 0;
+
 
 
 };

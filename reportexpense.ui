@@ -6,66 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>749</width>
-    <height>679</height>
+    <width>1245</width>
+    <height>662</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Expenses</string>
   </property>
-  <widget class="Line" name="line">
-   <property name="geometry">
-    <rect>
-     <x>7</x>
-     <y>100</y>
-     <width>731</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="Line" name="line_2">
-   <property name="geometry">
-    <rect>
-     <x>7</x>
-     <y>530</y>
-     <width>731</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>40</y>
-     <width>111</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>REPORT EXPENSE</string>
-   </property>
-  </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>160</y>
-     <width>251</width>
-     <height>321</height>
+     <x>450</x>
+     <y>150</y>
+     <width>291</width>
+     <height>351</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QLabel" name="label_2">
       <property name="text">
-       <string>VENDOR</string>
+       <string>Vendor</string>
       </property>
      </widget>
     </item>
@@ -75,7 +36,7 @@
     <item>
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>DATE</string>
+       <string>Date</string>
       </property>
      </widget>
     </item>
@@ -85,7 +46,7 @@
     <item>
      <widget class="QLabel" name="label_3">
       <property name="text">
-       <string>AMOUNT</string>
+       <string>Amount</string>
       </property>
      </widget>
     </item>
@@ -95,7 +56,7 @@
     <item>
      <widget class="QLabel" name="label_4">
       <property name="text">
-       <string>ACCOUNT</string>
+       <string>Account</string>
       </property>
      </widget>
     </item>
@@ -104,33 +65,90 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>550</y>
-     <width>236</width>
-     <height>25</height>
+     <x>450</x>
+     <y>510</y>
+     <width>114</width>
+     <height>23</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="text">
-       <string>SAVE AND NEW</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton">
-      <property name="text">
-       <string>SAVE AND CLOSE</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <property name="text">
+    <string>Save and New</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>453</x>
+     <y>550</y>
+     <width>291</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Graph</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>510</y>
+     <width>114</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save and Close</string>
+   </property>
+  </widget>
+  <widget class="QCustomPlot" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>1221</width>
+     <height>501</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>80</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>600</y>
+     <width>771</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Last entered transaction: </string>
+   </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

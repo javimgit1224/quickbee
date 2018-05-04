@@ -15,14 +15,11 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     reportexpense.cpp \
-    qcustomplot.cpp \
-    graph.cpp
+    qcustomplot.cpp
 
 HEADERS  += mainwindow.h \
     reportexpense.h \
-    qcustomplot.h \
-    graph.h
+    qcustomplot.h
 
 FORMS    += mainwindow.ui \
-    reportexpense.ui \
-    graph.ui
+    reportexpense.ui

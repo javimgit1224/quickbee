@@ -18,11 +18,23 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void makebar();
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
 private:
     Ui::reportexpense *ui;
     QVector<QString> accounts; //a vector of strings to hold the account name
     QVector<QString> vendors; //a vector of strings to hold the vendor names
     QVector<double> amount; //a vector of doubles to hold the amount from the accounts
+    int count = -1;
+    int count1 = 1;
+    int graphcount = 1;
+    int j = 0;
+
 };
 
 #endif // REPORTEXPENSE_H
