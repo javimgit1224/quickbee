@@ -33,6 +33,7 @@ void reportexpense::on_pushButton_clicked()
     ui->lineEdit_2->clear();
     ui->lineEdit_3->clear();
     ui->label_5->setText("Last entered transaction: " + date + " " + ven + " " + acc + " $" + QString::number(am));
+    opentext();
     makebar();
 }
 void reportexpense::makebar()
@@ -95,6 +96,7 @@ void reportexpense::on_pushButton_3_clicked()
     ui->lineEdit_2->clear();
     ui->lineEdit_3->clear();
     ui->label_5->setText("Last entered transaction: " + date + " " + ven + " " + acc + " $" + QString::number(am));
+    opentext();
 
     hide();
 
@@ -112,4 +114,17 @@ void reportexpense::on_pushButton_4_clicked()
     ui->lineEdit_3->clear();
     ui->pushButton_2->setText("GRAPH");
     ui->widget->hide();
+}
+void reportexpense::opentext()
+{
+    QFile file(filename);
+    if (file.open(QIODevice::ReadWrite)) {
+        QTextStream stream(&file);
+        stream << "ALL EXPENSES" << endl;
+        for (int i = 0; i < j; i++)
+        {
+            stream << dates[i] << " " << vendors[i] << " " << accounts[i] << " " << amount[i] << endl;
+
+        }
+    }
 }
